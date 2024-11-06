@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Dyanamic resume Builder</h1>
+    </div>
+    <div class="container">
+        <!-- <h2>Resume Builder</h2> -->
+    
+        <!-- Personal Information Section -->
+        <div class="section">
+            <h3>Personal Information</h3>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+    
+            <label for="contact">contct informtion:</label>
+            <input type="text" id="contact" placeholder="email address">
+
+            <label for="profilePic">Profile Picture URL:</label>
+            <input type="file" id="profilePic" name="profilePic" accept="image" required>
+
+        </div>
+    
+        <!-- Education Section -->
+        <div class="section">
+            <h3>Section 2: Education</h3>
+            <label for="education">Education:</label>
+            <textarea id="education" rows="4" placeholder="List your education history"></textarea>
+        </div>
+    
+        <!-- Skills Section -->
+        <div class="section">
+            <h3>Section 3: Skills</h3>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" rows="4" placeholder="Lis your skills"></textarea>
+        </div>
+    
+        <!-- Work Experience Section -->
+        <div class="section">
+            <h3>Section 4: Work Experience</h3>
+            <label for="workExperience">Work Experience:</label>
+            <textarea id="workExperience" rows="4" placeholder="Drscribe your work expereince"></textarea>
+        </div>
+    
+        <button onclick="generateResume()">Generate Resume</button>
+    
+        <!-- Dynamic Resume Preview -->
+        <div id="resumePreview">
+            <h2 id="preview" >Your Resume Preview </h2>
+            <img id="profileImagePreview" style="display:none; width: 150px; height: 150px; border-radius: 50%; margin-top: 10px;">
+            <div id="resumeContent"></div>
+        </div>
+    </div>
+    
+
+        <script src="app.js"></script>
+</body>
+</html>
